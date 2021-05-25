@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RodinaStore", "RodinaStore\RodinaStore.csproj", "{7EF379DD-09A6-4219-89AB-C35733A0167D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarcodeLib", "BarcodeLib\BarcodeLib.csproj", "{F8646414-0C9C-49BB-9DA3-3923BF78A398}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7EF379DD-09A6-4219-89AB-C35733A0167D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EF379DD-09A6-4219-89AB-C35733A0167D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EF379DD-09A6-4219-89AB-C35733A0167D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7EF379DD-09A6-4219-89AB-C35733A0167D}.Debug|x86.Build.0 = Debug|Any CPU
+		{7EF379DD-09A6-4219-89AB-C35733A0167D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EF379DD-09A6-4219-89AB-C35733A0167D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EF379DD-09A6-4219-89AB-C35733A0167D}.Release|x86.ActiveCfg = Release|Any CPU
+		{7EF379DD-09A6-4219-89AB-C35733A0167D}.Release|x86.Build.0 = Release|Any CPU
+		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Debug|x86.ActiveCfg = Debug|x86
+		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Debug|x86.Build.0 = Debug|x86
+		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Release|x86.ActiveCfg = Release|x86
+		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6E4B018A-67D0-4576-9BE2-FFBE985DA691}
+	EndGlobalSection
+EndGlobal

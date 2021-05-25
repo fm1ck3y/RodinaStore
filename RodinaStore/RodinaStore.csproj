@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7EF379DD-09A6-4219-89AB-C35733A0167D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RodinaStore</RootNamespace>
+    <AssemblyName>RodinaStore</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BarcodeLib">
+      <HintPath>..\..\RodinaStoreNew\RodinaStoreNew\bin\Debug\BarcodeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>Resources\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Database\RodinaStoreContext.cs" />
+    <Compile Include="Database\RodinaStoreController.cs" />
+    <Compile Include="Forms\AddClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddClientForm.designer.cs">
+      <DependentUpon>AddClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddNewProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddNewProductForm.designer.cs">
+      <DependentUpon>AddNewProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AuthForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AuthForm.Designer.cs">
+      <DependentUpon>AuthForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Barcode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Barcode.designer.cs">
+      <DependentUpon>Barcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Clients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Clients.designer.cs">
+      <DependentUpon>Clients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreateCategoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateCategoryForm.designer.cs">
+      <DependentUpon>CreateCategoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreateFirmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateFirmForm.designer.cs">
+      <DependentUpon>CreateFirmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HistoryCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HistoryCart.designer.cs">
+      <DependentUpon>HistoryCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HistoryChangedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HistoryChangedForm.designer.cs">
+      <DependentUpon>HistoryChangedForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoadingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoadingForm.designer.cs">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AuditItem.cs" />
+    <Compile Include="Model\BaseObject.cs" />
+    <Compile Include="Model\Cart.cs" />
+    <Compile Include="Model\CartItem.cs" />
+    <Compile Include="Model\Category.cs" />
+    <Compile Include="Model\Client.cs" />
+    <Compile Include="Model\Firm.cs" />
+    <Compile Include="Model\Permission.cs" />
+    <Compile Include="Model\Product.cs" />
+    <Compile Include="Model\SoldItem.cs" />
+    <Compile Include="Model\Till.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="MySettings.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <EmbeddedResource Include="Forms\AddClientForm.resx">
+      <DependentUpon>AddClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddNewProductForm.resx">
+      <DependentUpon>AddNewProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AuthForm.resx">
+      <DependentUpon>AuthForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Barcode.resx">
+      <DependentUpon>Barcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Clients.resx">
+      <DependentUpon>Clients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateCategoryForm.resx">
+      <DependentUpon>CreateCategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateFirmForm.resx">
+      <DependentUpon>CreateFirmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HistoryCart.resx">
+      <DependentUpon>HistoryCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HistoryChangedForm.resx">
+      <DependentUpon>HistoryChangedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoadingForm.resx">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Database.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Database.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\DataSources\RodinaStore.Model.AuditItem.datasource" />
+    <None Include="Properties\DataSources\RodinaStore.Model.CartItem.datasource" />
+    <None Include="Properties\DataSources\RodinaStore.Model.Client.datasource" />
+    <None Include="Properties\DataSources\RodinaStore.Model.Product.datasource" />
+    <None Include="Properties\DataSources\RodinaStore.Model.SoldItem.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Database.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Database.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Header.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Buttons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RodinaStore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-галочка-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-главная-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-загрузить-в-облако-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-идея-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-информация-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-контакты-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-коробка-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-мужчина-пользователь-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-настройки-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-новости-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-обновить-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-папка-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-перезапуск-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-плюс-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-портфель-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-редактировать-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-удалить-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-поиск-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-меню-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-down-12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-up-12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-удалить-25 .png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
